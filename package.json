@@ -1,6 +1,6 @@
 {
   "name": "@brianmcallister/react-highlight-text",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.0",
   "description": "React binding for @brianmcallister/highlight-text",
   "license": "MIT",
   "repository": "brianmcallister/react-highlight-text",
@@ -16,7 +16,7 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rimraf dist",
-    "prepare": "build",
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

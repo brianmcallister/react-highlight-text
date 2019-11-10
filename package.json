@@ -12,12 +12,11 @@
   "files": [
     "dist/**/*"
   ],
-  "main": "dist/index.js",
+  "main": "dist/HightlightText.js",
   "scripts": {
-    "build:types": "tsc --outdir dist",
-    "build": "npm run clean && npm run build:types && webpack && rimraf dist/*/__tests__",
+    "build": "npm run clean && tsc",
     "clean": "rimraf dist",
-    "prepare": "NODE_ENV=production npm run build",
+    "prepare": "build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -30,6 +29,7 @@
     "babel-loader": "8.0.6",
     "classnames": "2.2.6",
     "react": "16.11.0",
+    "rimraf": "3.0.0",
     "typescript": "3.7.2",
     "webpack": "4.41.2",
     "webpack-cli": "3.3.10"

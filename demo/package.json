@@ -1,5 +1,5 @@
 {
-  "name": "react-highlight-text-demo",
+  "name": "demo",
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack-dev-server --hot"

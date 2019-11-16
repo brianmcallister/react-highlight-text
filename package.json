@@ -24,7 +24,7 @@
     "clean": "rimraf dist",
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore ./src ./demo",
     "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "types": "tsc --noEmit"
   },
   "dependencies": {

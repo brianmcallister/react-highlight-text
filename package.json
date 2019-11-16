@@ -2,8 +2,11 @@
   "name": "@brianmcallister/react-highlight-text",
   "version": "1.0.1",
   "description": "React binding for @brianmcallister/highlight-text",
-  "license": "MIT",
+  "main": "dist/HighlightText.js",
+
   "repository": "brianmcallister/react-highlight-text",
+  "homepage": "https://react-highlight-text.netlify.com/",
+  "license": "MIT",
   "author": {
     "name": "Brian Wm. McAllister",
     "email": "brian@brianmcallister.com",
@@ -12,23 +15,28 @@
   "files": [
     "dist/**/*"
   ],
-  "main": "dist/HighlightText.js",
+  "keywords": [
+    "highlight",
+    "highlight-text",
+    "react"
+  ],
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rimraf dist",
     "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@brianmcallister/highlight-text": "2.0.0",
+    "react": "^16"
+  },
+  "devDependencies": {
     "@babel/core": "7.7.2",
     "@babel/preset-env": "7.7.1",
     "@babel/preset-react": "7.7.0",
     "@babel/preset-typescript": "7.7.2",
-    "@brianmcallister/highlight-text": "2.0.0",
     "@types/react": "16.9.11",
     "babel-loader": "8.0.6",
-    "classnames": "2.2.6",
-    "react": "16.11.0",
     "rimraf": "3.0.0",
     "typescript": "3.7.2",
     "webpack": "4.41.2",

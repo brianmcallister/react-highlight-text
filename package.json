@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "description": "React binding for @brianmcallister/highlight-text",
   "main": "dist/HighlightText.js",
-
   "repository": "brianmcallister/react-highlight-text",
   "homepage": "https://react-highlight-text.netlify.com/",
   "license": "MIT",
@@ -23,10 +22,12 @@
   "scripts": {
     "build": "npm run clean && tsc",
     "clean": "rimraf dist",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore ./src ./demo",
     "prepare": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "types": "tsc --noEmit"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@brianmcallister/highlight-text": "2.0.0",
     "react": "^16"
   },
@@ -36,7 +37,21 @@
     "@babel/preset-react": "7.7.0",
     "@babel/preset-typescript": "7.7.2",
     "@types/react": "16.9.11",
+    "@typescript-eslint/eslint-plugin": "2.7.0",
+    "@typescript-eslint/parser": "2.7.0",
     "babel-loader": "8.0.6",
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-typescript": "6.3.0",
+    "eslint-config-prettier": "6.5.0",
+    "eslint-plugin-eslint-comments": "3.1.2",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jest": "23.0.4",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.3.0",
+    "prettier": "1.19.1",
     "rimraf": "3.0.0",
     "typescript": "3.7.2",
     "webpack": "4.41.2",

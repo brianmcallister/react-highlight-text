@@ -1,11 +1,9 @@
-import faker from 'faker';
-import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import React from 'react';
 
-import theme from './theme';
 import HighlightText from '../HighlightText';
-import WordList from '../WordList';
 import LogoIcon from '../LogoIcon';
+import theme from './theme';
 
 import './_app.scss';
 
@@ -40,10 +38,7 @@ export default () => (
     </header>
 
     <div className={`${baseClass}__content`}>
-      <HighlightText
-        text="Hello world! I'm highlighted!"
-        words={['world', 'highlighted']}
-      />
+      <HighlightText text="Hello world! I'm highlighted!" words={['world', 'highlighted']} />
 
       <SyntaxHighlighter className={`${baseClass}__code`} language="javascript" style={theme}>
         {CODE_STRING}

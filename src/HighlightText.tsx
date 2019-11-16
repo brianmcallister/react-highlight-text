@@ -6,8 +6,15 @@ interface Props {
   words: string[];
 }
 
+/**
+ * Base CSS class.
+ * @private
+ */
 const baseClass = 'highlight-text';
 
+/**
+ * HighlightText component.
+ */
 export default ({ text, words }: Props) => {
   return (
     <div className={baseClass}>
@@ -17,5 +24,5 @@ export default ({ text, words }: Props) => {
         dangerouslySetInnerHTML={{ __html: highlightText(text, words) }}
       />
     </div>
-  )
+  );
 };

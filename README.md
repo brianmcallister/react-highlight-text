@@ -16,7 +16,16 @@
 
 ## Demo
 
-Check out the hosted demo right here: [https://react-highlight-text.netlify.com/](https://react-highlight-text.netlify.com/)
+Hosted demo: [https://react-highlight-text.netlify.com/](https://react-highlight-text.netlify.com/)
+
+You can also run the demo locally. To get started:
+
+```sh
+git clone git@github.com:brianmcallister/react-highlight-text.git
+cd react-highlight-text/demo
+npm i
+npm start
+```
 
 ###### [⇡ Top](#table-of-contents)
 

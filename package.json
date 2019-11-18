@@ -20,7 +20,7 @@
     "react"
   ],
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && tsc && rimraf dist/__tests__",
     "clean": "rimraf dist",
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx --ignore-path .gitignore ./src ./demo",
     "prepare": "npm run build",

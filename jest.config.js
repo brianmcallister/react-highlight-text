@@ -5,4 +5,5 @@ module.exports = {
   testEnvironmentOptions: {
     enzymeAdapter: 'react16',
   },
+  testPathIgnorePatterns: ['<rootDir>/dist'],
 };

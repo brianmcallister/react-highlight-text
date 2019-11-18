@@ -1,6 +1,6 @@
 # @brianmcallister/react-highlight-text
 
-[![CircleCI](https://circleci.com/gh/brianmcallister/react-highlight-text.svg?style=svg)](https://circleci.com/gh/brianmcallister/react-highlight-text) [![npm version](https://img.shields.io/npm/v/@brianmcallister/react-highlight-text?label=version&color=%2354C536&logo=npm)](https://www.npmjs.com/package/@brianmcallister/react-highlight-text)
+[![codecov](https://codecov.io/gh/brianmcallister/react-highlight-text/branch/master/graph/badge.svg)](https://codecov.io/gh/brianmcallister/react-highlight-text) [![CircleCI](https://circleci.com/gh/brianmcallister/react-highlight-text.svg?style=svg)](https://circleci.com/gh/brianmcallister/react-highlight-text) [![npm version](https://img.shields.io/npm/v/@brianmcallister/react-highlight-text?label=version&color=%2354C536&logo=npm)](https://www.npmjs.com/package/@brianmcallister/react-highlight-text)
 
 > React binding for @brianmcallister/highlight-text
 

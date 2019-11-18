@@ -1,7 +1,9 @@
+import classnames from 'classnames';
 import highlightText from '@brianmcallister/highlight-text/dist/browser';
 import React from 'react';
 
 interface Props {
+  className?: string;
   text: string;
   words: string[];
 }
@@ -15,14 +17,13 @@ const baseClass = 'highlight-text';
 /**
  * HighlightText component.
  */
-export default ({ text, words }: Props) => {
+export default ({ className, text, words }: Props) => {
   return (
-    <div className={baseClass}>
-      <div
-        style={{ whiteSpace: 'pre-wrap' }}
-        /* eslint-disable-next-line react/no-danger */
-        dangerouslySetInnerHTML={{ __html: highlightText(text, words) }}
-      />
-    </div>
+    <div
+      className={classnames(baseClass, className)}
+      /* eslint-disable-next-line react/no-danger */
+      dangerouslySetInnerHTML={{ __html: highlightText(text, words) }}
+      style={{ whiteSpace: 'pre-wrap' }}
+    />
   );
 };

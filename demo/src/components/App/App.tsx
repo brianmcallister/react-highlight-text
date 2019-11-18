@@ -7,6 +7,10 @@ import theme from './theme';
 
 import './_app.scss';
 
+/**
+ * Example code.
+ * @private
+ */
 const CODE_STRING = `import HighlightText from '@brianmcallister/react-highlight-text';
 
 const MyComponent = () => (
@@ -17,6 +21,10 @@ const MyComponent = () => (
 );
 `;
 
+/**
+ * Base CSS component.
+ * @private
+ */
 const baseClass = 'app';
 
 /**

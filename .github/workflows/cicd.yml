@@ -24,6 +24,7 @@ jobs:
             ${{ runner.os }}-
 
       - run: npm ci
+      - run: cd demo && npm ci && cd -
       - run: npm run lint
       - run: npm run types
       - run: |

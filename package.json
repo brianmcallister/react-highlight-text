@@ -4,7 +4,7 @@
   "description": "React binding for @brianmcallister/highlight-text",
   "main": "dist/HighlightText.js",
   "repository": "brianmcallister/react-highlight-text",
-  "homepage": "https://react-highlight-text.netlify.com/",
+  "homepage": "https://brianmcallister.github.io/react-highlight-text/",
   "license": "MIT",
   "author": {
     "name": "Brian Wm. McAllister",

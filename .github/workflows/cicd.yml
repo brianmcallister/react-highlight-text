@@ -4,45 +4,36 @@ jobs:
   cicd:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v1
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
-            fetch-depth: 0
-        
-      - uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-            
-      - uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules-demo
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('demo/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-            
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            demo/package-lock.json
+
       - run: npm ci
       - run: cd demo && npm ci && cd -
       - run: npm run lint
       - run: npm run types
-      - run: |
-          npm run test -- --coverage
-          bash <(curl -s https://codecov.io/bash) -f ./coverage/coverage-final.json
-          
-      - uses: JS-DevTools/npm-publish@v1
+      - run: npm run test -- --coverage
+
+      - uses: codecov/codecov-action@v5
+        with:
+          files: ./coverage/coverage-final.json
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: false
+
+      # Only publish from master, and only when package.json has a new version.
+      - uses: JS-DevTools/npm-publish@v3
+        if: github.ref == 'refs/heads/master'
         with:
           token: ${{ secrets.NPM_TOKEN }}
-          
+
       #- uses: chromaui/action@v1
       #  with:
       #    token: ${{ secrets.GITHUB_TOKEN }}

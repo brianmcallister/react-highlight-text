@@ -16,7 +16,7 @@
 
 ## Demo
 
-Hosted demo: [https://react-highlight-text.netlify.com/](https://react-highlight-text.netlify.com/)
+Hosted demo: [https://brianmcallister.github.io/react-highlight-text/](https://brianmcallister.github.io/react-highlight-text/)
 
 You can also run the demo locally. To get started:
 

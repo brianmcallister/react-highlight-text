@@ -1,4 +1,6 @@
-export default {
+import type { CSSProperties } from 'react';
+
+const theme: Record<string, CSSProperties> = {
   'code[class*="language-"]': {
     color: '#c5c8c6',
     textShadow: '0 1px rgba(0, 0, 0, 0.3)',
@@ -61,7 +63,7 @@ export default {
     color: '#c5c8c6',
   },
   '.namespace': {
-    Opacity: '.7',
+    opacity: '.7',
   },
   property: {
     color: '#96CBFE',
@@ -151,3 +153,5 @@ export default {
     fontStyle: 'italic',
   },
 };
+
+export default theme;

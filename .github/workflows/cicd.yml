@@ -28,9 +28,9 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: false
 
-      # Only publish from master, and only when package.json has a new version.
+      # Only publish from main, and only when package.json has a new version.
       - uses: JS-DevTools/npm-publish@v3
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         with:
           token: ${{ secrets.NPM_TOKEN }}
 
